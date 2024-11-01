@@ -1,0 +1,15 @@
+{% load static %}
+
+<li>
+  <article class="post">
+    <a href="{% url "post_detail" "the-mountains" %}">
+      <img src="{% static "blog/images/mountains.jpg" %}" alt="Mountain Hiking">
+      <div class="post__content">
+        <h3>Mountain hiking</h3>
+        <p>
+          There is nothing like the feeling of hiking up a mountain and seeing the world from above.
+        </p>
+      </div>
+    </a>
+  </article>
+</li>

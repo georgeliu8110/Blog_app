@@ -1,45 +1,30 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
-
-{% block css_files %}
-  <link rel="stylesheet" href="{% static 'blog/index.css'}">
-{% endblock %}
 
 {% block title %}
   My Blog
 {% endblock %}
 
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "blog/post.css" %}" />
+  <link rel="stylesheet" href="{% static "blog/index.css" %}" />
+{% endblock %}
+
 {% block content %}
-  <header id="main-navigation">
-    <h1><a href="">My Blog</a></h1>
-    <nav>
-      <a href="">All posts</a>
-    </nav>
-  </header>
+
   <section id="welcome">
     <header>
-      <img src="" alt="'Max - The Auther of this blog">
+      <img src="{% static "blog/images/woods.jpg" %}" alt="'Max - The Auther of this blog">
       <h2>George's Blog</h2>
     </header>
     <p>Hi, I'm George and I love to blog about the tech!</p>
   </section>
-  <section id="lastest-posts">
+  <section id="latest-posts">
     <h2>
       My lastest Thoughts
     </h2>
     <ul>
-      <li>
-        <article class="post">
-          <a href="">
-            <img src="" alt="Mountain hiking">
-            <div class="'post_content">
-              <h3>Mountain hiking</h3>
-              <p>
-                There is nothing like the feeling of hiking up a mountain and seeing the world from above.
-              </p>
-            </div>
-        </article>
-      </li>
+      {% include "blog/includes/post.html" %}
     </ul>
   </section>
   <section id="about">

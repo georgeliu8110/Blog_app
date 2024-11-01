@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+  This is my post
+{% endblock %}
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "blog/post-detail.css" %}" />
+{% endblock %}
+
+{% block content %}
+<section id="summary">
+  <h2>Post Title</h2>
+  <article>
+    <img src="{% static "blog/images/mountains.jpg" %}" alt="Post Title">
+    <address>
+      By George
+    </address>
+    <div>
+      Last updated on <time>October 28th</time>
+    </div>
+  </article>
+  </section>
+
+  <main>
+    <p>
+      lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Duo Reges: constructio interrete
+    </p>
+    <p>
+      lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Duo Reges: constructio interrete
+    </p>
+    <p>
+      lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista probare, quae sunt a te dicta? Duo Reges: constructio interrete
+    </p>
+  </main>
+
+{% endblock %}
